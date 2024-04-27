@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kane</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/093aad478d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>KANE</h1>
+                <ul id="sidemenu">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>NOTE: Hover the Green Color</p>
+                <h1>Hi, I'm <span>Kane Pacanan</span><br><br>From Surgiao del Sur</h1>
+            </div>
+        </div>
+    </div>
+    <!-- about-->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Pictures/c8908ce0-0c5a-4e3e-be40-56e979ce2d66.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a College Graduate Major in Computer Science and a stats analyst at Qwikcut. <br>
+                        During my academic journey I learned programing, <br>
+                        we build Online Voting System for our school <br>
+                        so it would be easier to vote during electing presidents <br>
+                        for department and clubs. <br>
+                        We use PhP and our host is XAMPP so that we can code our database. <br>
+
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-End Developer</span><br>Web Desinging HTML and CSS</li>
+                            <li><span>Back-End Developer</span><br>Creating Database Using SQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - 2023 </span><br>Online Voting System for our school</li>
+                            <li><span>Stats Analyst</span><br>QwikCut Stats and Analyst</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018 - 2019 Senior High School</span><br>Saint Michael College</li>
+                            <li><span>2022 - 2023 College</span><br>Saint Michael College, Inc.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+      <!-- Contact -->
+      <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>kaynepackz@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>09395076452</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/KenneX12/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/ck.pacanan/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/kaynepackz"><i class="fa-brands fa-twitter"></i></a><br>
+                        
+                    </div>
+
+                </div>
+                <div class="contact-rigt">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <a href="Professional CV Resume.pdf" download class="btn">Download CV</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Kane.</p>
+        </div>
+      </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
